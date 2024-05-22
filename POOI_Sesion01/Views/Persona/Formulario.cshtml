@@ -1,0 +1,56 @@
+﻿@model POOI_Sesion01.Models.Persona
+
+@{
+    ViewBag.Title = "Formulario";
+}
+<h2>Formulario</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @Html.Label("Codigo", htmlAttributes: new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.codigo,
+                htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Nombre", htmlAttributes: new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.nombre, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Apellido", htmlAttributes: new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.apellido, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Horas", htmlAttributes: new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.cantidadHoras, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Tarifa", htmlAttributes: new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.tarifa, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Sueldo Bruto", htmlAttributes: new {@class="control-label" })
+            @Html.TextBox("sueldo", ViewBag.sueldo as string ,
+                htmlAttributes: new { 
+                                @class="form-control",
+                                @readonly="@readonly"
+                })
+        </div>
+        <br />
+
+        @Html.ActionLink("Nuevo", "Formulario", null, new { @class="btn btn-danger"})
+        
+        <input type="submit" value="Procesar" class="btn btn-success" />
+
+    </div>
+}
+
+
+

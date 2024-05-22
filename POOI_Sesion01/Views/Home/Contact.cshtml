@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <address>
+        Nombre: @ViewBag.nombre<br />
+        Apellido : @ViewBag.apellido<br />
+        Tarifa : @ViewBag.tarifa <br />
+        Horas : @ViewBag.cantidadHoras <br />
+        Sueldo : @ViewBag.sueldo <br />
+        Celular:  @ViewBag.celular <br />
+    </address>
+
+    <address>
+        <strong>Correo Electrónico:</strong>   
+        <a href="#">@ViewBag.correo
+        </a><br />
+    </address>
+</main>
